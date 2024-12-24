@@ -1,0 +1,113 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    font-size: medium;
+  }
+
+  .container {
+      max-width: 500px;
+      width: 100%;
+      
+      position: relative;
+      max-height: 50vh;
+      border: 2px solid black;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 0.5s ease;
+     border-radius: 15px;
+     background-color: rgb(189, 205, 222);
+     border: none; 
+     z-index: 1;   
+    
+  }
+  .container::before{
+      content: "";
+      width: 170px;
+      height: 170px;
+      background-color: rgb(10, 24, 225);
+      position: absolute;
+      left:0;
+      border-radius: 100px 0px 500%;
+      opacity: 0.3;
+      top: 0;
+      z-index: -1;
+  }
+  .container::after{
+      content: "";
+      width: 170px;
+      height: 170px;
+      background-color: rgb(8, 24, 236);
+      position: absolute;
+      right:0;
+      border-radius: 500% 0px 100px;
+      opacity: 0.3;
+      bottom: 0;
+      z-index: -1;
+  }
+
+  .box {
+      height: 30px;
+      width: 30px;
+      padding: 5px;
+      border: 2px solid rgb(74, 197, 242);
+      border-radius: 5px;
+      background-color: rgb(187, 230, 245);
+  }
+
+  .heading{
+      /* background-color: white; */
+      /* padding: 7px; */
+       border-radius: 100px ;
+       margin: 10px 0 30px 0px;
+    
+      
+  }
+
+  input[type="text"],
+  button {
+      padding: 10px;
+      /* Padding around input and button */
+      font-size: 16px;
+      /* Font size for input and button */
+      border: 2px solid #ccc;
+      /* Light border */
+      border-radius: 5px;
+      /* Rounded corners */
+      margin-bottom: 10px;
+      /* Space below input and button */
+   
+  }
+
+  button {
+      background-color: rgb(53, 92, 247);
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      /* Smooth background color transition */
+  }
+
+  button:hover {
+      background-color: rgb(47, 69, 194);
+      /* Darker background on hover */
+  }
+
+  #text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: normal;
+
+  }
+
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+
+      to {
+          opacity: 1;
+      }
+  }
